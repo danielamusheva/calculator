@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class CurrencyCalculator {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+
+        System.out.println("Enter a value:");
+        double value1 = Double.parseDouble(scan.nextLine());
+        System.out.println("Enter currency:");
+        String currency = scan.nextLine();
+        double value2 = 0;
+
+        if (currency.equals("GBP")){
+            value2 = value1 * 1.3954;
+        }else if (currency.equals("EUR")){
+            value2 = value1 * 1.2085;
+        }else if (currency.equals("BGN")){
+            value2 = value1 * 0.6179;
+        }else if (currency.equals("TRY")){
+            value2 = value1 * 0.1361;
+        }else if (currency.equals("PLN")){
+            value2 = value1 * 0.2663;
+        }
+
+        System.out.printf("%.2f",value2);
+    }
+}
